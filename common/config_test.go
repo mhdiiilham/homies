@@ -46,5 +46,11 @@ func TestReadConfig(t *testing.T) {
 		assertion.Nil(cfg)
 		assertion.Equal(common.ErrConfigNotFound, actualErr)
 	})
+}
 
+func TestConfigurationGetPort(t *testing.T) {
+	cfg := common.Configuration{Port: 8099}
+	expected := ":8099"
+
+	assert.Equal(t, expected, cfg.GetPort())
 }
