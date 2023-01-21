@@ -1,0 +1,17 @@
+env: test
+port: 8099
+
+database:
+  dialect: postgre
+  host: localhost
+  port: 5432
+  username: postgre
+  password: root
+  name: postgre
+
+externalClient:
+  veryfi:
+    url: https://api.veryfi.com/api/v8/partner/documents
+    clientId: fake-client-id
+    username: fake-client-username
+    apiKey: fake-client-api-key

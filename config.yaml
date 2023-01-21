@@ -1,0 +1,17 @@
+env:
+port:
+
+database:
+  dialect:
+  host:
+  port:
+  username:
+  password:
+  name:
+
+externalClient:
+  veryfi:
+    url:
+    clientId:
+    username:
+    apiKey:
