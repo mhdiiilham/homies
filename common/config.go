@@ -1,18 +1,24 @@
 package common
 
 import (
+	"fmt"
+
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 )
 
 type Configuration struct {
-	Env            string            `mapstructure:"env"`
-	Port           int               `mapstructure:"port"`
-	Database       DatabseCredential `mapstructure:"database"`
-	ExternalClient ExternalClient    `mapstructure:"externalClient"`
+	Env            string             `mapstructure:"env"`
+	Port           int                `mapstructure:"port"`
+	Database       DatabaseCredential `mapstructure:"database"`
+	ExternalClient ExternalClient     `mapstructure:"externalClient"`
 }
 
-type DatabseCredential struct {
+func (c Configuration) GetPort() string {
+	return fmt.Sprintf(":%d", c.Port)
+}
+
+type DatabaseCredential struct {
 	Dialect  string `mapstructure:"dialect"`
 	Host     string `mapstructure:"host"`
 	Port     int    `mapstructure:"port"`
