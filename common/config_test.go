@@ -16,7 +16,7 @@ func TestReadConfig(t *testing.T) {
 		expected := &common.Configuration{
 			Env:  "test",
 			Port: 8099,
-			Database: common.DatabseCredential{
+			Database: common.DatabaseCredential{
 				Dialect:  "postgre",
 				Host:     "localhost",
 				Port:     5432,
